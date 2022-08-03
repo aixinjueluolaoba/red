@@ -1,4 +1,4 @@
-//2.0
+
 auto.waitFor();
 function tiaozhuan(roomid) {
 
@@ -23,8 +23,8 @@ function httpp(url) {
 
 
 
-function canyu() {
-    var pid = 0;
+function canyu(pid) {
+    toast('0.1')
     var r= httpp('http://106.55.45.245:3000/todos/' + pid);
     if (r) {
         var roomid = r.roomid
@@ -49,7 +49,7 @@ function canyu() {
         } else { toast('没有找到该控件'); httpp('http://106.55.45.245:3000/patch1/' + pid); }
 
     }
-    setTimeout(() => { canyu() }, 1000)
+    //setTimeout(() => { canyu() }, 1000)
 
     
 }
@@ -59,18 +59,9 @@ function canyu() {
 //     toast(engines.myEngine().cwd())
 //     engines.execScript("hello world", "toast('hello world')"
 // });
-events.on("exit", function(){
-    toast('失败，重启中')
-    sleep(5000)
-    engines.execScriptFile("/storage/emulated/0/脚本/wwq.js");
-});
-
-sleep(5000)
-canyu();
-
-
-
-
-
-
-
+// events.on("exit", function(){
+//     toast('失败，重启中')
+//     sleep(5000)
+//     engines.execScriptFile("/storage/emulated/0/脚本/wwq.js");
+// });
+module.exports = canyu;
