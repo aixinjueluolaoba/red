@@ -1,4 +1,4 @@
-
+//2.0
 auto.waitFor();
 function tiaozhuan(roomid) {
 
