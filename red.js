@@ -24,7 +24,7 @@ function httpp(url) {
 
 
 function canyu(pid) {
-    toast('0.1')
+    toast('0.2')
     var r= httpp('http://106.55.45.245:3000/todos/' + pid);
     if (r) {
         var roomid = r.roomid
